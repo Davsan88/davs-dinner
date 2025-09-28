@@ -7,6 +7,9 @@
 
 
 header {
+    padding: 2rem 2rem 3rem 2rem;
     background-image: url('./images/headerImage.png');
+    background-size: cover;
     color: #ffffff;
+
 }
