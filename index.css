@@ -4,3 +4,9 @@
     box-sizing: border-box;
     font-family: "Smythe", system-ui;
 }
+
+
+header {
+    background-image: url('./images/headerImage.png');
+    color: #ffffff;
+}
