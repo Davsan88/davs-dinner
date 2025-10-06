@@ -19,7 +19,7 @@ header {
 }
 
 .menu-item {
-    background-color: orangered;
+    /* background-color: orangered; */
     display: flex;
     align-items: center;
     padding-bottom: 3rem;
@@ -28,14 +28,14 @@ header {
 }
 
 .item-img {
-    background-color: darkorchid;
+    /* background-color: darkorchid; */
     flex-shrink: 0;
     max-width: 100%;
   height: auto;
 }
 
 .item-info {
-    background-color: aqua;
+    /* background-color: aqua; */
     margin-left: 1.5rem;
 }
 
