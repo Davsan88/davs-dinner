@@ -12,4 +12,17 @@ header {
     background-size: cover;
     color: #ffffff;
 
-}x
+}
+
+#menu {
+    padding: 2rem;
+}
+
+.menu-item {
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #D2D2D2;
+}
