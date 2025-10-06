@@ -19,10 +19,39 @@ header {
 }
 
 .menu-item {
-    /* background-color: aqua; */
+    background-color: orangered;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     padding-bottom: 3rem;
     margin-bottom: 2rem;
     border-bottom: 2px solid #D2D2D2;
+}
+
+.item-img {
+    background-color: darkorchid;
+    flex-shrink: 0;
+    max-width: 100%;
+  height: auto;
+}
+
+.item-info {
+    background-color: aqua;
+    margin-left: 1.5rem;
+}
+
+.item-name {
+    font-size: 1.75rem;
+}
+
+.item-ingredients {
+    color: #8B8B8B;
+}
+
+.item-price {
+    font-size: 1.25rem;   
+    margin-top: 1rem; 
+}
+
+.add-btn {
+    margin-left: auto; 
 }
