@@ -53,5 +53,15 @@ header {
 }
 
 .add-btn {
-    margin-left: auto; 
+    margin-left: auto;
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem; 
+    font-weight: 200;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid #dedede;
+    cursor: pointer;
+    background-color: #ffffff;
+    vertical-align:top;  
 }
