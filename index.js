@@ -1,5 +1,7 @@
 import { menuArray } from './data.js'
 
+
+
 const generateMenuHtml = () => {
     let menuHtml = ''
     
@@ -12,13 +14,20 @@ const generateMenuHtml = () => {
                     <p class="item-ingredients">${menuItem.ingredients}</p>
                     <p class="item-price">$${menuItem.price}</p>
                 </div>
-                <button class="add-btn">+</button>
+                <button class="add-btn" data-id=${menuItem.id}>+</button>
             </div>
         `
     })
 
     return menuHtml
 }
+
+document.addEventListener('click', function(e) {
+    if(e.target.dataset.id) {
+        console.log(e.target.dataset.id)
+    }
+})
+
 
 const renderMenu = () => {
     document.getElementById('menu').innerHTML = generateMenuHtml() 
