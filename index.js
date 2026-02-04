@@ -4,7 +4,7 @@ import { menuArray } from './data.js'
 
 const generateMenuHtml = () => {
     let menuHtml = ''
-    
+
     menuArray.forEach(menuItem => {
         menuHtml += `
             <div class="menu-item">
@@ -22,15 +22,38 @@ const generateMenuHtml = () => {
     return menuHtml
 }
 
-document.addEventListener('click', function(e) {
-    if(e.target.dataset.id) {
-        console.log(e.target.dataset.id)
+document.addEventListener('click', function (e) {
+    if (e.target.dataset.id) {
+        handleAddClick(e.target.dataset.id)
     }
+    
+    // console.log(typeof e.target.dataset.id)
+
+    
+    console.log(order)
 })
 
 
+let order = []
+
+const handleAddClick = (itemId) => {
+    const targetItem = menuArray.find(item => String(item.id) === itemId)
+    console.log(targetItem)
+
+    const updateTargetItem = {...targetItem, qty: 0}
+
+    order.find(existingId => existingId.id === updateTargetItem.id
+        ? updateTargetItem.qty++ : order.push({...updateTargetItem, qty: 1}))
+
+}
+
+    // console.log(typeof menuArray[0].id)
+    // console.log(typeof stringTargetItem)
+
+
+
 const renderMenu = () => {
-    document.getElementById('menu').innerHTML = generateMenuHtml() 
+    document.getElementById('menu').innerHTML = generateMenuHtml()
 }
 
 renderMenu()
