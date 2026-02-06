@@ -52,22 +52,3 @@ const renderMenu = () => {
 }
 
 renderMenu()
-
-// const itemInOrder = order.find(({id}) => id === updateItem.id)
-
-// if (itemInOrder) {
-//     itemInOrder.qty = 1
-// } else {
-//     order.push({...itemInOrder, qty: 1})
-
-// itemInOrder.qty = 1
-
-// if (!order.includes(itemInOrder)) {
-//     order.push({...itemInOrder, qty: 1})
-// } else {
-//     itemInOrder.qty++
-//     // itemInOrder.qty = 1
-// }
-
-// console.log(itemInOrder)
-// console.log(order)
