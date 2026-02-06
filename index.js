@@ -27,12 +27,8 @@ document.addEventListener('click', function (e) {
         handleAddClick(e.target.dataset.id)
     }
     
-    // console.log(typeof e.target.dataset.id)
-
-    
     console.log(order)
 })
-
 
 let order = []
 
@@ -40,17 +36,29 @@ const handleAddClick = (itemId) => {
     const targetItem = menuArray.find(item => String(item.id) === itemId)
     console.log(targetItem)
 
-    const updateTargetItem = {...targetItem, qty: 0}
+    // const updateOrder = (targetItem) => {
+        targetItem.qty = 0
 
-    order.find(existingId => existingId.id === updateTargetItem.id
-        ? updateTargetItem.qty++ : order.push({...updateTargetItem, qty: 1}))
+        const isOrdered = order.find(({name}) => name === targetItem.name)
+
+        console.log(isOrdered)
+
+        // const updateOrder = (item) => 
+        //     order.find(item)
+        //     if (item !== targetItem) {
+        //         order.push(targetItem)
+        //     } else {
+        //         targetItem.qty++
+        //     }
+    
+        updateOrder()
+
+    // const updateTargetItem = {...targetItem, qty: 0}
+
+    // let existingItem = order.find(existingId => existingId === updateTargetItem.id
+    //     ? order[updateTargetItem.qty++] : order.push({...updateTargetItem, qty: 1}))
 
 }
-
-    // console.log(typeof menuArray[0].id)
-    // console.log(typeof stringTargetItem)
-
-
 
 const renderMenu = () => {
     document.getElementById('menu').innerHTML = generateMenuHtml()
