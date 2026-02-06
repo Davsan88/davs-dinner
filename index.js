@@ -22,42 +22,23 @@ const generateMenuHtml = () => {
     return menuHtml
 }
 
+let order = []
+
 document.addEventListener('click', function (e) {
     if (e.target.dataset.id) {
         handleAddClick(e.target.dataset.id)
     }
-    
+
     console.log(order)
 })
 
-let order = []
 
 const handleAddClick = (itemId) => {
     const targetItem = menuArray.find(item => String(item.id) === itemId)
     console.log(targetItem)
 
-    // const updateOrder = (targetItem) => {
-        targetItem.qty = 0
-
-        const isOrdered = order.find(({name}) => name === targetItem.name)
-
-        console.log(isOrdered)
-
-        // const updateOrder = (item) => 
-        //     order.find(item)
-        //     if (item !== targetItem) {
-        //         order.push(targetItem)
-        //     } else {
-        //         targetItem.qty++
-        //     }
-    
-        updateOrder()
-
-    // const updateTargetItem = {...targetItem, qty: 0}
-
-    // let existingItem = order.find(existingId => existingId === updateTargetItem.id
-    //     ? order[updateTargetItem.qty++] : order.push({...updateTargetItem, qty: 1}))
-
+    const { ingredients, emoji, ...updatedItem } = targetItem
+    console.log(updatedItem)
 }
 
 const renderMenu = () => {
@@ -65,3 +46,22 @@ const renderMenu = () => {
 }
 
 renderMenu()
+
+// const itemInOrder = order.find(({id}) => id === updateItem.id)
+
+// if (itemInOrder) {
+//     itemInOrder.qty = 1
+// } else {
+//     order.push({...itemInOrder, qty: 1})
+
+// itemInOrder.qty = 1
+
+// if (!order.includes(itemInOrder)) {
+//     order.push({...itemInOrder, qty: 1})
+// } else {
+//     itemInOrder.qty++
+//     // itemInOrder.qty = 1
+// }
+
+// console.log(itemInOrder)
+// console.log(order)
