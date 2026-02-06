@@ -41,6 +41,8 @@ const handleAddClick = (itemId) => {
     console.log(updatedItem)
 
     const itemInOrder = order.find(({ id }) => id === updatedItem.id ) 
+
+    order.includes(itemInOrder) ? itemInOrder.qty++ : order.push({ ...updatedItem, qty: 1 })
 }
 
 const renderMenu = () => {
