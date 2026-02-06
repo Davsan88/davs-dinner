@@ -39,6 +39,8 @@ const handleAddClick = (itemId) => {
 
     const { ingredients, emoji, ...updatedItem } = targetItem
     console.log(updatedItem)
+
+    const itemInOrder = order.find(({ id }) => id === updatedItem.id ) 
 }
 
 const renderMenu = () => {
